@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage - TerrainXact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Avenir+Next+LT+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #f0f8ff 0%, #e0f5ff 100%);
+        }
+        .button {
+            width: 300px; /* Fixed width for uniformity */
+            font-size: 16px; /* Adjust font size for better fit */
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00A0E4;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+            white-space: normal; /* Allow text wrapping */
+            text-align: center; /* Center-align text */
+        }
+        .button:hover {
+            background-color: #008CBA;
+            transform: translateY(-2px);
+        }
+        .navbar {
+            background-color: #00B0F0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: rgba(0, 176, 240, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow">
+        <img src="{{ url_for('static', filename='images/Background image.jpg') }}" class="active">
+        <img src="{{ url_for('static', filename='images/ai-1.png') }}">
+        <img src="{{ url_for('static', filename='images/tea-2.png') }}">
+        <img src="{{ url_for('static', filename='images/final-image.png') }}">
+        <img src="{{ url_for('static', filename='images/solarpanels.jpg') }}">
+        <img src="{{ url_for('static', filename='images/tea.png') }}">
+        <img src="{{ url_for('static', filename='images/terrain_background.png') }}">
+    </div>
+    <div class="navbar">
+        <h1 class="title">TerrainXact</h1>
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ url_for('static', filename='images/Tool-logo-1-removebg-preview (1).png') }}" alt="Tool Logo" class="tool-logo">
+            </a>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/CIR.jpg') }}" alt="CIR Logo">
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; gap: 20px;">
+        <button class="button" onclick="window.location.href='/mesh_contour/data-processing'">Alos Palsar- Digital Terrain Model</button>
+        <button class="button" onclick="window.location.href='/shading/shading-pvsyst'">USGS LiDAR- Digital Terrain Model, Digital Surface Model and Canopy Height Models</button>
+    </div>
+    <div class="footer">
+        &copy; 2024 TerrainXact. All rights reserved.
+    </div>
+    <script>
+        var slideIndex = 0;
+        var slides = document.querySelectorAll('.slideshow img');
+        function showSlides() {
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+        showSlides();
+    </script>
+</body>
+</html>

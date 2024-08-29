@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="parcel_polygon" id="parcel_polygon">
+	<SimpleField name="county_id" type="int"></SimpleField>
+	<SimpleField name="cty_row_id" type="int"></SimpleField>
+	<SimpleField name="OBJECTID" type="int"></SimpleField>
+	<SimpleField name="parcel_id" type="string"></SimpleField>
+	<SimpleField name="alt_id_1" type="string"></SimpleField>
+	<SimpleField name="alt_id_2" type="string"></SimpleField>
+	<SimpleField name="county_name" type="string"></SimpleField>
+	<SimpleField name="muni_name" type="string"></SimpleField>
+	<SimpleField name="state_abbr" type="string"></SimpleField>
+	<SimpleField name="county_link" type="string"></SimpleField>
+	<SimpleField name="address" type="string"></SimpleField>
+	<SimpleField name="addr_number" type="string"></SimpleField>
+	<SimpleField name="addr_street_name" type="string"></SimpleField>
+	<SimpleField name="addr_street_type" type="string"></SimpleField>
+	<SimpleField name="addr_city" type="string"></SimpleField>
+	<SimpleField name="addr_zip" type="string"></SimpleField>
+	<SimpleField name="addr_zipplusfour" type="string"></SimpleField>
+	<SimpleField name="census_zip" type="string"></SimpleField>
+	<SimpleField name="owner" type="string"></SimpleField>
+	<SimpleField name="mail_address1" type="string"></SimpleField>
+	<SimpleField name="mail_address3" type="string"></SimpleField>
+	<SimpleField name="mail_addressnumber" type="string"></SimpleField>
+	<SimpleField name="mail_streetname" type="string"></SimpleField>
+	<SimpleField name="mail_streetnameposttype" type="string"></SimpleField>
+	<SimpleField name="mail_placename" type="string"></SimpleField>
+	<SimpleField name="mail_statename" type="string"></SimpleField>
+	<SimpleField name="mail_zipcode" type="string"></SimpleField>
+	<SimpleField name="owner_occupied" type="string"></SimpleField>
+	<SimpleField name="usps_residential" type="string"></SimpleField>
+	<SimpleField name="school_district" type="string"></SimpleField>
+	<SimpleField name="acreage_deeded" type="string"></SimpleField>
+	<SimpleField name="acreage_calc" type="float"></SimpleField>
+	<SimpleField name="acreage_adjacent_with_sameowner" type="float"></SimpleField>
+	<SimpleField name="land_cover" type="string"></SimpleField>
+	<SimpleField name="crop_cover" type="string"></SimpleField>
+	<SimpleField name="census_block" type="int"></SimpleField>
+	<SimpleField name="census_tract" type="int"></SimpleField>
+	<SimpleField name="section_township_range" type="string"></SimpleField>
+	<SimpleField name="fld_zone" type="string"></SimpleField>
+	<SimpleField name="zone_subty" type="string"></SimpleField>
+	<SimpleField name="latitude" type="float"></SimpleField>
+	<SimpleField name="longitude" type="float"></SimpleField>
+	<SimpleField name="elevation" type="float"></SimpleField>
+	<SimpleField name="robust_id" type="string"></SimpleField>
+	<SimpleField name="last_updated" type="string"></SimpleField>
+</Schema>
+<Folder><name>parcel_polygon</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#parcel_polygon">
+		<SimpleData name="county_id">29201</SimpleData>
+		<SimpleData name="cty_row_id">7495</SimpleData>
+		<SimpleData name="OBJECTID">105392253</SimpleData>
+		<SimpleData name="parcel_id">1830050000000301600</SimpleData>
+		<SimpleData name="alt_id_1">13107</SimpleData>
+		<SimpleData name="alt_id_2">18-3.0-05.00-000-003-016.00</SimpleData>
+		<SimpleData name="county_name">Scott</SimpleData>
+		<SimpleData name="muni_name">Richland</SimpleData>
+		<SimpleData name="state_abbr">MO</SimpleData>
+		<SimpleData name="county_link">https://reportallusa.com/cama_redir?robust_id=AAByEYCMvAb9MtYn</SimpleData>
+		<SimpleData name="address">304 DACUS Dr</SimpleData>
+		<SimpleData name="addr_number">304</SimpleData>
+		<SimpleData name="addr_street_name">DACUS</SimpleData>
+		<SimpleData name="addr_street_type">Dr</SimpleData>
+		<SimpleData name="addr_city">SIKESTON</SimpleData>
+		<SimpleData name="addr_zip">63801</SimpleData>
+		<SimpleData name="addr_zipplusfour">9017</SimpleData>
+		<SimpleData name="census_zip">63801</SimpleData>
+		<SimpleData name="owner">NANTZ AMY M</SimpleData>
+		<SimpleData name="mail_address1">304 DACUS DRIVE</SimpleData>
+		<SimpleData name="mail_address3">SIKESTON MO 63801</SimpleData>
+		<SimpleData name="mail_addressnumber">304</SimpleData>
+		<SimpleData name="mail_streetname">DACUS</SimpleData>
+		<SimpleData name="mail_streetnameposttype">DRIVE</SimpleData>
+		<SimpleData name="mail_placename">SIKESTON</SimpleData>
+		<SimpleData name="mail_statename">MO</SimpleData>
+		<SimpleData name="mail_zipcode">63801</SimpleData>
+		<SimpleData name="owner_occupied">Yes</SimpleData>
+		<SimpleData name="usps_residential">Residential</SimpleData>
+		<SimpleData name="school_district">Sikeston R-VI School District</SimpleData>
+		<SimpleData name="acreage_deeded">0.0000</SimpleData>
+		<SimpleData name="acreage_calc">0.923249481287569</SimpleData>
+		<SimpleData name="acreage_adjacent_with_sameowner">0.923249481287569</SimpleData>
+		<SimpleData name="land_cover">{&quot;Developed Low Intensity&quot;: 0.64, &quot;Developed Medium Intensity&quot;: 0.19, &quot;Developed Open Space&quot;: 0.09}</SimpleData>
+		<SimpleData name="crop_cover">{&quot;Developed/Low Intensity&quot;: 0.64, &quot;Developed/Open Space&quot;: 0.19, &quot;Soybeans&quot;: 0.09}</SimpleData>
+		<SimpleData name="census_block">2109</SimpleData>
+		<SimpleData name="census_tract">780400</SimpleData>
+		<SimpleData name="section_township_range">5-26N-14E</SimpleData>
+		<SimpleData name="fld_zone">AH</SimpleData>
+		<SimpleData name="zone_subty"></SimpleData>
+		<SimpleData name="latitude">36.9284646827347</SimpleData>
+		<SimpleData name="longitude">-89.5618775163789</SimpleData>
+		<SimpleData name="elevation">312.229252444376</SimpleData>
+		<SimpleData name="robust_id">AAByEYCMvAb9MtYn</SimpleData>
+		<SimpleData name="last_updated">2024-Q2</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-89.5613568896979,36.9286285208875 -89.5613557232789,36.9282659864067 -89.5623981408145,36.9283008438127 -89.5623993119127,36.9286633783485 -89.5613568896979,36.9286285208875</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#parcel_polygon">
+		<SimpleData name="county_id">29201</SimpleData>
+		<SimpleData name="cty_row_id">9863</SimpleData>
+		<SimpleData name="OBJECTID">105394621</SimpleData>
+		<SimpleData name="parcel_id">1830050000000301600</SimpleData>
+		<SimpleData name="alt_id_1">13107</SimpleData>
+		<SimpleData name="alt_id_2">18-3.0-05.00-000-003-016.00</SimpleData>
+		<SimpleData name="county_name">Scott</SimpleData>
+		<SimpleData name="muni_name">Richland</SimpleData>
+		<SimpleData name="state_abbr">MO</SimpleData>
+		<SimpleData name="county_link">https://reportallusa.com/cama_redir?robust_id=AAByEdjc5UJFHxRn</SimpleData>
+		<SimpleData name="address">304 DACUS Dr</SimpleData>
+		<SimpleData name="addr_number">304</SimpleData>
+		<SimpleData name="addr_street_name">DACUS</SimpleData>
+		<SimpleData name="addr_street_type">Dr</SimpleData>
+		<SimpleData name="addr_city">SIKESTON</SimpleData>
+		<SimpleData name="addr_zip">63801</SimpleData>
+		<SimpleData name="addr_zipplusfour">9017</SimpleData>
+		<SimpleData name="census_zip">63801</SimpleData>
+		<SimpleData name="owner">NANTZ AMY M</SimpleData>
+		<SimpleData name="mail_address1">304 DACUS DRIVE</SimpleData>
+		<SimpleData name="mail_address3">SIKESTON MO 63801</SimpleData>
+		<SimpleData name="mail_addressnumber">304</SimpleData>
+		<SimpleData name="mail_streetname">DACUS</SimpleData>
+		<SimpleData name="mail_streetnameposttype">DRIVE</SimpleData>
+		<SimpleData name="mail_placename">SIKESTON</SimpleData>
+		<SimpleData name="mail_statename">MO</SimpleData>
+		<SimpleData name="mail_zipcode">63801</SimpleData>
+		<SimpleData name="owner_occupied">Yes</SimpleData>
+		<SimpleData name="usps_residential">Residential</SimpleData>
+		<SimpleData name="school_district">Sikeston R-VI School District</SimpleData>
+		<SimpleData name="acreage_deeded">0.0000</SimpleData>
+		<SimpleData name="acreage_calc">0.923249481287569</SimpleData>
+		<SimpleData name="acreage_adjacent_with_sameowner">0.923249481287569</SimpleData>
+		<SimpleData name="land_cover">{&quot;Developed Low Intensity&quot;: 0.64, &quot;Developed Medium Intensity&quot;: 0.19, &quot;Developed Open Space&quot;: 0.09}</SimpleData>
+		<SimpleData name="crop_cover">{&quot;Developed/Low Intensity&quot;: 0.64, &quot;Developed/Open Space&quot;: 0.19, &quot;Soybeans&quot;: 0.09}</SimpleData>
+		<SimpleData name="census_block">2109</SimpleData>
+		<SimpleData name="census_tract">780400</SimpleData>
+		<SimpleData name="section_township_range">5-26N-14E</SimpleData>
+		<SimpleData name="fld_zone">AH</SimpleData>
+		<SimpleData name="zone_subty"></SimpleData>
+		<SimpleData name="latitude">36.9284646827347</SimpleData>
+		<SimpleData name="longitude">-89.5618775163789</SimpleData>
+		<SimpleData name="elevation">312.229252444376</SimpleData>
+		<SimpleData name="robust_id">AAByEdjc5UJFHxRn</SimpleData>
+		<SimpleData name="last_updated">2024-Q2</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-89.5613568896979,36.9286285208875 -89.5613557232789,36.9282659864067 -89.5623981408145,36.9283008438127 -89.5623993119127,36.9286633783485 -89.5613568896979,36.9286285208875</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+</Folder>
+</Document></kml>

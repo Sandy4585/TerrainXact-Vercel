@@ -1,0 +1,246 @@
+body {
+    font-family: 'Avenir Next LT Pro', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f8ff; /* Light blue background */
+}
+
+.navbar {
+    background-color: #00B0F0; /* Blue background */
+    padding: 5px 30px; /* Reduced padding to balance the height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255); /* White text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: 60px; /* Fixed height for the navbar */
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.tool-logo {
+    height: 60px; /* Adjust the height as needed */
+    margin-right: 20px; /* Space between logos */
+}
+
+.container {
+    width: 90%; /* Use 90% of the available width */
+    max-width: 700px; /* Ensure it doesn't exceed 1200px */
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-top: 5vh;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    color: #03aae7; /* Blue text */
+}
+
+.pdf-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #00B0F0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.pdf-link:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    color: rgb(175, 49, 95); /* Darker text */
+    font-weight: bold;
+}
+
+input[type=file] {
+    padding: 10px;
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 5px;
+    width: 100%;
+    background-color: #ffffff; /* White background */
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 5px;
+}
+
+.checkbox-group div {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type=checkbox] {
+    margin-right: 5px;
+}
+
+button[type=submit] {
+    padding: 10px 20px;
+    background-color: #00B0F0; /* Blue button background */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type=submit]:hover {
+    background-color: #008CBA;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Add space between the buttons */
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #00B0F0; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #008CBA; /* Button hover background color */
+}
+
+
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #00B0F0; /* Blue background */
+    color: white; /* White text */
+    font-size: 14px;
+}
+
+.logo {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.progress {
+    display: none;
+    margin-top: 20px;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4caf50;
+    text-align: center;
+    color: #ffffff;
+    white-space: nowrap;
+    transition: width 0.4s ease;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.file-success {
+    color: green;
+    margin-left: 10px;
+}
+
+.slideshow {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: 90%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+.progress-circle {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgba(0, 0, 0, 0.1);
+    border-top: 10px solid #00B0F0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

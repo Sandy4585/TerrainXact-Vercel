@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shading PVsyst - TerrainXact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Avenir+Next+LT+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <style>
+        #file-info {
+            color: black;
+            font-weight: bold;
+        }
+    </style>        
+</head>
+
+<body>
+    <div class="slideshow">
+        <img src="{{ url_for('static', filename='images/Background image.jpg') }}" class="active">
+        <img src="{{ url_for('static', filename='images/ai-1.png') }}">
+        <img src="{{ url_for('static', filename='images/tea-2.png') }}">
+        <img src="{{ url_for('static', filename='images/final-image.png') }}">
+        <img src="{{ url_for('static', filename='images/solarpanels.jpg') }}">
+        <img src="{{ url_for('static', filename='images/tea.png') }}">
+        <img src="{{ url_for('static', filename='images/terrain_background.png') }}">
+    </div>
+    <div class="navbar">
+        <h1 class="title">TerrainXact</h1>
+        <div class="logo-container">
+            <a href="/">
+                <img src="{{ url_for('static', filename='images/Tool-logo-1-removebg-preview (1).png') }}" alt="Tool Logo" class="tool-logo">
+            </a>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/CIR.jpg') }}" alt="CIR Logo">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Shading Analysis for PVsyst</h1>
+        
+        <form id="upload-form" action="/shading/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" id="kml-file" name="file" accept=".kml" multiple required>
+                <span id="file-info"></span> <!-- This will display the file name or count -->
+            </div>
+            <button type="submit">Upload KML Files and Display Map</button>
+        </form>
+
+        <!-- Map Container -->
+        <div id="map" style="height: 300px; margin-top: 20px;"></div>
+
+        <!-- Add Drawn Polygons to AOI Button -->
+        <button id="add-polygon" disabled>Add Polygon to AOI</button>
+
+        <!-- Process File Button -->
+        <button id="process-file" disabled>Process Files</button>
+
+        <!-- Progress Circle -->
+        <div id="progress-circle" class="progress-circle"></div>
+    </div>
+    <div class="footer">
+        &copy; 2024 TerrainXact. All rights reserved.
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet-omnivore/leaflet-omnivore.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+
+    <script>
+        var slideIndex = 0;
+        var slides = document.querySelectorAll('.slideshow img');
+        function showSlides() {
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + 1) % slides.length;
+            slides[slideIndex].classList.add('active');
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+        showSlides();
+
+        $('#process-file').on('click', function () {
+            $('#progress-circle').show();
+        });
+
+        $(document).ajaxComplete(function () {
+            $('#progress-circle').hide();
+        });
+
+        // Display selected file names or count
+        $('#kml-file').on('change', function() {
+            var files = $(this)[0].files; // Get the list of selected files
+            var fileInfo = '';
+
+            if (files.length === 1) {
+                fileInfo = files[0].name; // Display the name of the single file
+            } else if (files.length > 1) {
+                fileInfo = files.length + ' files selected'; // Display the count of selected files
+            }
+
+            $('#file-info').text(fileInfo); // Update the file info next to the input field
+        });
+    </script>
+</body>
+
+</html>

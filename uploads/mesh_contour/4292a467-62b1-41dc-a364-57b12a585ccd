@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Sanate-BOUNDARY.kml</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Sanate</name>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-68.83972039668663,18.55269423676863,0 -68.83782908745889,18.54950761466515,0 -68.8383517170693,18.548354309496,0 -68.83848078616705,18.54758554639149,0 -68.83918520684422,18.54710948616287,0 -68.83945434560133,18.54574517830033,0 -68.83896335520781,18.54454698148578,0 -68.83923053109264,18.54350186203525,0 -68.83765034996365,18.5438994450311,0 -68.83669001973716,18.54318042797614,0 -68.83653003710558,18.54316483848112,0 -68.83603379380192,18.54293862522199,0 -68.83590281556287,18.5426261040517,0 -68.8347787575531,18.54294507930039,0 -68.83466550431163,18.5432773186023,0 -68.83495257822096,18.54347908403561,0 -68.83509751563921,18.54455536670885,0 -68.83414730430979,18.54511039052667,0 -68.8333343885203,18.5450725510049,0 -68.83460484419837,18.546883733309,0 -68.83291234763317,18.54872677074597,0 -68.83280497645623,18.54920463393776,0 -68.8321793987066,18.54985563942815,0 -68.8319757566255,18.55000686602783,0 -68.83135780299737,18.55054307228739,0 -68.83141603836972,18.55313029211154,0 -68.83205707293939,18.55369000039106,0 -68.83284035181647,18.55463548313015,0 -68.83436847268418,18.55561840284359,0 -68.83612917917876,18.55717016154663,0 -68.84008158579503,18.55312465467511,0 -68.83972039668663,18.55269423676863,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>
